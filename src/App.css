@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 nav {
   ul {
     list-style: none;

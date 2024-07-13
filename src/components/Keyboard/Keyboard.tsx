@@ -1,4 +1,5 @@
 import React, { ChangeEvent } from 'react';
+import './style.css';
 
 interface KeyboardProps {
     inputValue: number | string;
@@ -31,18 +32,29 @@ const Keyboard: React.FC<KeyboardProps> = ({ inputValue, setInputValue }) => {
     
 
     return (
-        <>
-            <input 
+        <div className='keyboard-root'>
+            <input
+                className='keyboard-input'
                 type="number" 
                 value={inputValue} 
                 onChange={handleInputChange} 
                 placeholder="Enter amount" 
             />
-            {numbers.map((value: number) => (
-                <button key={value} onClick={() => handleButtonClick(value)}>{value}</button>
-            ))}
-            <button onClick={() => setInputValue('')}>clear</button>
-        </>
+            <div className="keyboard-buttons-box">
+                {numbers.map((value: number) => (
+                    <div key={value} className='keyboard-button-wrapper'>
+                        <button
+                            className='keyboard-button'
+                            onClick={() => handleButtonClick(value)}>
+                                {value}
+                        </button>
+                    </div>
+                ))}
+                <div className='clear-button-box'>
+                    <button onClick={() => setInputValue('')}>clear</button>
+                </div>
+            </div>
+        </div>
     );
 };
 
