@@ -3,7 +3,7 @@ import './style.css';
 
 interface KeyboardProps {
   inputValue: number | string;
-  setInputValue: (value: number | string) => void;
+  setInputValue: React.Dispatch<React.SetStateAction<number | string>>;
 }
 
 const Keyboard: React.FC<KeyboardProps> = ({ inputValue, setInputValue }) => {
@@ -17,7 +17,6 @@ const Keyboard: React.FC<KeyboardProps> = ({ inputValue, setInputValue }) => {
   };
 
   const handleButtonClick = (num: number) => {
-    // @ts-expect-error
     setInputValue((prev: string | number) => {
       if (typeof prev === 'string' && prev === '') {
         return String(num);
