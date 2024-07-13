@@ -24,7 +24,7 @@ const Withdrawing: React.FC = () => {
     return (
         <>
             <h1>Withdrawing</h1>
-            <ActionButton handleClick={handleRemoveMoney} message='Get money'/>
+            <ActionButton handleClick={handleRemoveMoney} message='Withdraw money'/>
             <Keyboard inputValue={inputValue} setInputValue={setInputValue} />
             <Dialog isDialogOpen={isDialogOpen} setIsDialogOpen={setIsDialogOpen} />
         </>
