@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react';
 import { MoneyContext } from '../../MoneyContext';
 import Keyboard from '../Keyboard/Keyboard';
 import Dialog from '../Dialog/Dialog';
+import ActionButton from '../ActionButton/ActionButton';
 
 const Withdrawing: React.FC = () => {
     const moneyContext = useContext(MoneyContext);
@@ -23,7 +24,7 @@ const Withdrawing: React.FC = () => {
     return (
         <>
             <h1>Withdrawing</h1>
-            <button onClick={handleRemoveMoney}>Get money</button>
+            <ActionButton handleClick={handleRemoveMoney} message='Get money'/>
             <Keyboard inputValue={inputValue} setInputValue={setInputValue} />
             <Dialog isDialogOpen={isDialogOpen} setIsDialogOpen={setIsDialogOpen} />
         </>

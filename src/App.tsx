@@ -1,5 +1,5 @@
 // src/App.js
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, NavLink  } from 'react-router-dom';
 import Depositing from './components/Depositing/Depositing';
 import Withdrawing from './components/Withdrawing/Withdrawing';
 import './App.css';
@@ -13,10 +13,10 @@ function App() {
                 <nav>
                     <ul>
                         <li>
-                            <Link to="/depositing">Depositing</Link>
+                            <NavLink  to="/depositing" className={({ isActive }) => isActive ? "active-link" : undefined}>Depositing</NavLink >
                         </li>
                         <li>
-                            <Link to="/withdrawing">Withdrawing</Link>
+                            <NavLink  to="/withdrawing" className={({ isActive }) => isActive ? "active-link" : undefined}>Withdrawing</NavLink >
                         </li>
                     </ul>
                 </nav>

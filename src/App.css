@@ -17,6 +17,11 @@ nav {
     gap: 3rem;
     padding-inline-start: 0;
 
+    li .active-link {
+      background-color: yellow;
+      color: #242424;
+    }
+
     a {
       padding: 0.5rem;
       border: 1px solid yellow;
@@ -27,7 +32,7 @@ nav {
       &:hover {
         background-color: yellow;
         transition: .3s ease-in-out;
-        color: 242424;
+        color: #242424;
       }
     }
   }

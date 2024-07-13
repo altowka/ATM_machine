@@ -1,6 +1,7 @@
-import React, { useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { MoneyContext } from '../../MoneyContext';
 import Keyboard from '../Keyboard/Keyboard';
+import ActionButton from '../ActionButton/ActionButton';
 
 const Despositing = () => {
     const moneyContext = useContext(MoneyContext);
@@ -15,7 +16,7 @@ const Despositing = () => {
     return (
         <>
             <h1>Despositing</h1>
-            <button onClick={handleAddMoney}>Add Money</button>
+            <ActionButton handleClick={handleAddMoney} message='Add Money'/>
             <Keyboard inputValue={inputValue} setInputValue={setInputValue} />
         </>
     )
