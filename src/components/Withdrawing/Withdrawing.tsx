@@ -17,7 +17,7 @@ const Withdrawing: React.FC = () => {
     }
     if (moneyContext && inputValue !== '') {
       moneyContext.removeMoney(Number(inputValue));
-      setInputValue(''); // Clear the input after removing money
+      setInputValue('');
     }
   };
 

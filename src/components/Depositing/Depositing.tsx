@@ -10,7 +10,7 @@ const Depositing = () => {
   const handleAddMoney = () => {
     if (moneyContext && inputValue !== '') {
       moneyContext.addMoney(Number(inputValue));
-      setInputValue(''); // Clear the input after removing money
+      setInputValue('');
     }
   };
   return (
